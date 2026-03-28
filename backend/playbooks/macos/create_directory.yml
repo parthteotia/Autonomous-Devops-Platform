@@ -1,0 +1,9 @@
+---
+- name: Create demo_folder
+  hosts: webservers
+  tasks:
+    - name: Create folder
+      ansible.builtin.file:
+        path: ~/{folder_name}
+        state: directory
+        mode: '0755'

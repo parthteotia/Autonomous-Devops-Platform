@@ -1,0 +1,19 @@
+---
+- name: Install Docker on macOS
+  hosts: webservers
+  gather_facts: true
+  tasks:
+    - name: Ensure Homebrew is installed
+      ansible.builtin.command: brew --version
+      register: brew_check
+      changed_when: false
+      failed_when: false
+
+    - name: Install Docker via Homebrew
+      ansible.builtin.homebrew:
+        name: docker
+        state: present
+
+    - name: Start Docker service
+      shell: open -a Docker
+      

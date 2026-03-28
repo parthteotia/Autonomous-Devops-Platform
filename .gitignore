@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+
+# Env files
+.env
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Build / cache
+dist/
+build/
+*.egg-info/
+
+# local playbook library
+backend/local_playbooks.json
+
+# Project specific
+playbook.yml
